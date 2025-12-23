@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<incidents format="6" by="lint 8.0.2" type="partial_results">
+    <map id="UnusedResources">
+        <location id="R.color.black"
+            file="${:app*debug*sourceProvider*0*resDir*0}/values/colors.xml"
+            line="7"
+            column="12"
+            startOffset="238"
+            endLine="7"
+            endColumn="24"
+            endOffset="250"/>
+        <location id="R.color.teal_700"
+            file="${:app*debug*sourceProvider*0*resDir*0}/values/colors.xml"
+            line="6"
+            column="12"
+            startOffset="195"
+            endLine="6"
+            endColumn="27"
+            endOffset="210"/>
+        <location id="R.color.white"
+            file="${:app*debug*sourceProvider*0*resDir*0}/values/colors.xml"
+            line="8"
+            column="12"
+            startOffset="278"
+            endLine="8"
+            endColumn="24"
+            endOffset="290"/>
+        <entry
+            name="model"
+            string="color[black(D),teal_200(U),white(D),teal_700(D),purple_700(U),purple_500(U)],style[Theme_VolumeNormalizer(U),Theme_MaterialComponents_DayNight_NoActionBar(R)];6^7^5^4^1;;;"/>
+    </map>
+
+</incidents>

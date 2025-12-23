@@ -1,0 +1,260 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<issues format="6" by="lint 8.0.2">
+
+    <issue
+        id="ObsoleteLintCustomCheck"
+        severity="Warning"
+        message="Library lint checks reference invalid APIs; these checks **will be skipped**!&#xA;&#xA;Lint found an issue registry (`androidx.compose.runtime.lint.RuntimeIssueRegistry`)&#xA;which contains some references to invalid API:&#xA;org.jetbrains.kotlin.analysis.api.lifetime.KtLifetimeTokenFactory: void afterLeavingAnalysisContext(org.jetbrains.kotlin.analysis.api.lifetime.KtLifetimeToken)&#xA;(Referenced from androidx/compose/runtime/lint/AutoboxingStateCreationDetector.class)&#xA;&#xA;Therefore, this lint check library is **not** included&#xA;in analysis. This affects the following lint checks:&#xA;`AutoboxingStateValueProperty`&#xA;`AutoboxingStateCreation`&#xA;`CoroutineCreationDuringComposition`&#xA;`FlowOperatorInvokedInComposition`&#xA;`ComposableLambdaParameterNaming`&#xA;`ComposableLambdaParameterPosition`&#xA;`ComposableNaming`&#xA;`StateFlowValueCalledInComposition`&#xA;`CompositionLocalNaming`&#xA;`MutableCollectionMutableState`&#xA;`ProduceStateDoesNotAssignValue`&#xA;`RememberReturnType`&#xA;`OpaqueUnitKey`&#xA;`UnrememberedMutableState`&#xA;&#xA;To use this lint check, upgrade to a more recent version&#xA;of the library."
+        category="Lint"
+        priority="10"
+        summary="Obsolete custom lint check"
+        explanation="Lint can be extended with &quot;custom checks&quot;: additional checks implemented by developers and libraries to for example enforce specific API usages required by a library or a company coding style guideline.&#xA;&#xA;The Lint APIs are not yet stable, so these checks may either cause a performance degradation, or stop working, or provide wrong results.&#xA;&#xA;This warning flags custom lint checks that are found to be using obsolete APIs and will need to be updated to run in the current lint environment.&#xA;&#xA;It may also flag issues found to be using a **newer** version of the API, meaning that you need to use a newer version of lint (or Android Studio or Gradle plugin etc) to work with these checks.">
+        <location
+            file="/Users/may215/.gradle/caches/transforms-3/75de5a8ee2d12414963b740eb026c5c3/transformed/jetified-runtime-release/jars/lint.jar"/>
+    </issue>
+
+    <issue
+        id="MissingPermission"
+        severity="Error"
+        message="Missing permissions required by Builder.build: android.permission.RECORD_AUDIO"
+        category="Correctness"
+        priority="9"
+        summary="Missing Permissions"
+        explanation="This check scans through your code and libraries and looks at the APIs being used, and checks this against the set of permissions required to access those APIs. If the code using those APIs is called at runtime, then the program will crash.&#xA;&#xA;Furthermore, for permissions that are revocable (with `targetSdkVersion` 23), client code must also be prepared to handle the calls throwing an exception if the user rejects the request for permission at runtime."
+        errorLine1="        recorder = AudioRecord.Builder()"
+        errorLine2="                   ^">
+        <location
+            file="/Users/may215/development/mobile/volume-normalizer/app/src/main/java/com/yourapp/volumenormalizer/audio/AudioCaptureEngine.kt"
+            line="52"
+            column="20"/>
+    </issue>
+
+    <issue
+        id="OldTargetApi"
+        severity="Warning"
+        message="Not targeting the latest versions of Android; compatibility modes apply. Consider testing and updating this version. Consult the android.os.Build.VERSION_CODES javadoc for details."
+        category="Correctness"
+        priority="6"
+        summary="Target SDK attribute is not targeting latest version"
+        explanation="When your application runs on a version of Android that is more recent than your `targetSdkVersion` specifies that it has been tested with, various compatibility modes kick in. This ensures that your application continues to work, but it may look out of place. For example, if the `targetSdkVersion` is less than 14, your app may get an option button in the UI.&#xA;&#xA;To fix this issue, set the `targetSdkVersion` to the highest available value. Then test your app to make sure everything works correctly. You may want to consult the compatibility notes to see what changes apply to each version you are adding support for: https://developer.android.com/reference/android/os/Build.VERSION_CODES.html as well as follow this guide:&#xA;https://developer.android.com/distribute/best-practices/develop/target-sdk.html"
+        url="https://developer.android.com/distribute/best-practices/develop/target-sdk.html"
+        urls="https://developer.android.com/distribute/best-practices/develop/target-sdk.html,https://developer.android.com/reference/android/os/Build.VERSION_CODES.html"
+        errorLine1="        targetSdk 34"
+        errorLine2="        ~~~~~~~~~~~~">
+        <location
+            file="/Users/may215/development/mobile/volume-normalizer/app/build.gradle"
+            line="13"
+            column="9"/>
+    </issue>
+
+    <issue
+        id="GradleDependency"
+        severity="Warning"
+        message="A newer version of androidx.core:core-ktx than 1.12.0 is available: 1.17.0"
+        category="Correctness"
+        priority="4"
+        summary="Obsolete Gradle Dependency"
+        explanation="This detector looks for usages of libraries where the version you are using is not the current stable release. Using older versions is fine, and there are cases where you deliberately want to stick with an older version. However, you may simply not be aware that a more recent version is available, and that is what this lint check helps find."
+        errorLine1="    implementation &quot;androidx.core:core-ktx:1.12.0&quot;"
+        errorLine2="                   ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="/Users/may215/development/mobile/volume-normalizer/app/build.gradle"
+            line="50"
+            column="20"/>
+    </issue>
+
+    <issue
+        id="GradleDependency"
+        severity="Warning"
+        message="A newer version of androidx.appcompat:appcompat than 1.6.1 is available: 1.7.1"
+        category="Correctness"
+        priority="4"
+        summary="Obsolete Gradle Dependency"
+        explanation="This detector looks for usages of libraries where the version you are using is not the current stable release. Using older versions is fine, and there are cases where you deliberately want to stick with an older version. However, you may simply not be aware that a more recent version is available, and that is what this lint check helps find."
+        errorLine1="    implementation &quot;androidx.appcompat:appcompat:1.6.1&quot;"
+        errorLine2="                   ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="/Users/may215/development/mobile/volume-normalizer/app/build.gradle"
+            line="51"
+            column="20"/>
+    </issue>
+
+    <issue
+        id="GradleDependency"
+        severity="Warning"
+        message="A newer version of com.google.android.material:material than 1.11.0 is available: 1.13.0"
+        category="Correctness"
+        priority="4"
+        summary="Obsolete Gradle Dependency"
+        explanation="This detector looks for usages of libraries where the version you are using is not the current stable release. Using older versions is fine, and there are cases where you deliberately want to stick with an older version. However, you may simply not be aware that a more recent version is available, and that is what this lint check helps find."
+        errorLine1="    implementation &quot;com.google.android.material:material:1.11.0&quot;"
+        errorLine2="                   ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="/Users/may215/development/mobile/volume-normalizer/app/build.gradle"
+            line="52"
+            column="20"/>
+    </issue>
+
+    <issue
+        id="GradleDependency"
+        severity="Warning"
+        message="A newer version of androidx.activity:activity-compose than 1.8.1 is available: 1.12.2"
+        category="Correctness"
+        priority="4"
+        summary="Obsolete Gradle Dependency"
+        explanation="This detector looks for usages of libraries where the version you are using is not the current stable release. Using older versions is fine, and there are cases where you deliberately want to stick with an older version. However, you may simply not be aware that a more recent version is available, and that is what this lint check helps find."
+        errorLine1="    implementation &quot;androidx.activity:activity-compose:1.8.1&quot;"
+        errorLine2="                   ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="/Users/may215/development/mobile/volume-normalizer/app/build.gradle"
+            line="55"
+            column="20"/>
+    </issue>
+
+    <issue
+        id="GradleDependency"
+        severity="Warning"
+        message="A newer version of androidx.compose.material:material than 1.5.4 is available: 1.10.0"
+        category="Correctness"
+        priority="4"
+        summary="Obsolete Gradle Dependency"
+        explanation="This detector looks for usages of libraries where the version you are using is not the current stable release. Using older versions is fine, and there are cases where you deliberately want to stick with an older version. However, you may simply not be aware that a more recent version is available, and that is what this lint check helps find."
+        errorLine1="    implementation &quot;androidx.compose.material:material:1.5.4&quot;"
+        errorLine2="                   ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="/Users/may215/development/mobile/volume-normalizer/app/build.gradle"
+            line="58"
+            column="20"/>
+    </issue>
+
+    <issue
+        id="GradleDependency"
+        severity="Warning"
+        message="A newer version of androidx.compose.material:material-icons-core than 1.5.4 is available: 1.7.8"
+        category="Correctness"
+        priority="4"
+        summary="Obsolete Gradle Dependency"
+        explanation="This detector looks for usages of libraries where the version you are using is not the current stable release. Using older versions is fine, and there are cases where you deliberately want to stick with an older version. However, you may simply not be aware that a more recent version is available, and that is what this lint check helps find."
+        errorLine1="    implementation &quot;androidx.compose.material:material-icons-core:1.5.4&quot;"
+        errorLine2="                   ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="/Users/may215/development/mobile/volume-normalizer/app/build.gradle"
+            line="62"
+            column="20"/>
+    </issue>
+
+    <issue
+        id="GradleDependency"
+        severity="Warning"
+        message="A newer version of androidx.compose.material:material-icons-extended than 1.5.4 is available: 1.7.8"
+        category="Correctness"
+        priority="4"
+        summary="Obsolete Gradle Dependency"
+        explanation="This detector looks for usages of libraries where the version you are using is not the current stable release. Using older versions is fine, and there are cases where you deliberately want to stick with an older version. However, you may simply not be aware that a more recent version is available, and that is what this lint check helps find."
+        errorLine1="    implementation &quot;androidx.compose.material:material-icons-extended:1.5.4&quot;"
+        errorLine2="                   ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="/Users/may215/development/mobile/volume-normalizer/app/build.gradle"
+            line="63"
+            column="20"/>
+    </issue>
+
+    <issue
+        id="GradleDependency"
+        severity="Warning"
+        message="A newer version of androidx.compose.ui:ui-test-manifest than 1.6.4 is available: 1.10.0"
+        category="Correctness"
+        priority="4"
+        summary="Obsolete Gradle Dependency"
+        explanation="This detector looks for usages of libraries where the version you are using is not the current stable release. Using older versions is fine, and there are cases where you deliberately want to stick with an older version. However, you may simply not be aware that a more recent version is available, and that is what this lint check helps find."
+        errorLine1="    debugImplementation &quot;androidx.compose.ui:ui-test-manifest:${compose_ui_version}&quot;"
+        errorLine2="                        ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="/Users/may215/development/mobile/volume-normalizer/app/build.gradle"
+            line="66"
+            column="25"/>
+    </issue>
+
+    <issue
+        id="ObsoleteSdkInt"
+        severity="Warning"
+        message="Unnecessary; SDK_INT is always >= 29"
+        category="Performance"
+        priority="6"
+        summary="Obsolete SDK_INT Version Check"
+        explanation="This check flags version checks that are not necessary, because the `minSdkVersion` (or surrounding known API level) is already at least as high as the version checked for.&#xA;&#xA;Similarly, it also looks for resources in `-vNN` folders, such as `values-v14` where the version qualifier is less than or equal to the `minSdkVersion`, where the contents should be merged into the best folder."
+        errorLine1="        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {"
+        errorLine2="            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="/Users/may215/development/mobile/volume-normalizer/app/src/main/java/com/yourapp/volumenormalizer/Notifications.kt"
+            line="23"
+            column="13"/>
+    </issue>
+
+    <issue
+        id="UnusedResources"
+        severity="Warning"
+        message="The resource `R.color.teal_700` appears to be unused"
+        category="Performance"
+        priority="3"
+        summary="Unused resources"
+        explanation="Unused resources make applications larger and slow down builds.&#xA;&#xA;&#xA;The unused resource check can ignore tests. If you want to include resources that are only referenced from tests, consider packaging them in a test source set instead.&#xA;&#xA;You can include test sources in the unused resource check by setting the system property lint.unused-resources.include-tests =true, and to exclude them (usually for performance reasons), use lint.unused-resources.exclude-tests =true.&#xA;,"
+        errorLine1="    &lt;color name=&quot;teal_700&quot;>#018786&lt;/color>"
+        errorLine2="           ~~~~~~~~~~~~~~~">
+        <location
+            file="/Users/may215/development/mobile/volume-normalizer/app/src/main/res/values/colors.xml"
+            line="6"
+            column="12"/>
+    </issue>
+
+    <issue
+        id="UnusedResources"
+        severity="Warning"
+        message="The resource `R.color.black` appears to be unused"
+        category="Performance"
+        priority="3"
+        summary="Unused resources"
+        explanation="Unused resources make applications larger and slow down builds.&#xA;&#xA;&#xA;The unused resource check can ignore tests. If you want to include resources that are only referenced from tests, consider packaging them in a test source set instead.&#xA;&#xA;You can include test sources in the unused resource check by setting the system property lint.unused-resources.include-tests =true, and to exclude them (usually for performance reasons), use lint.unused-resources.exclude-tests =true.&#xA;,"
+        errorLine1="    &lt;color name=&quot;black&quot;>#000000&lt;/color>"
+        errorLine2="           ~~~~~~~~~~~~">
+        <location
+            file="/Users/may215/development/mobile/volume-normalizer/app/src/main/res/values/colors.xml"
+            line="7"
+            column="12"/>
+    </issue>
+
+    <issue
+        id="UnusedResources"
+        severity="Warning"
+        message="The resource `R.color.white` appears to be unused"
+        category="Performance"
+        priority="3"
+        summary="Unused resources"
+        explanation="Unused resources make applications larger and slow down builds.&#xA;&#xA;&#xA;The unused resource check can ignore tests. If you want to include resources that are only referenced from tests, consider packaging them in a test source set instead.&#xA;&#xA;You can include test sources in the unused resource check by setting the system property lint.unused-resources.include-tests =true, and to exclude them (usually for performance reasons), use lint.unused-resources.exclude-tests =true.&#xA;,"
+        errorLine1="    &lt;color name=&quot;white&quot;>#FFFFFF&lt;/color>"
+        errorLine2="           ~~~~~~~~~~~~">
+        <location
+            file="/Users/may215/development/mobile/volume-normalizer/app/src/main/res/values/colors.xml"
+            line="8"
+            column="12"/>
+    </issue>
+
+    <issue
+        id="MissingApplicationIcon"
+        severity="Warning"
+        message="Should explicitly set `android:icon`, there is no default"
+        category="Usability:Icons"
+        priority="5"
+        summary="Missing application icon"
+        explanation="You should set an icon for the application as whole because there is no default. This attribute must be set as a reference to a drawable resource containing the image (for example `@drawable/icon`)."
+        url="https://developer.android.com/studio/publish/preparing#publishing-configure"
+        urls="https://developer.android.com/studio/publish/preparing#publishing-configure"
+        errorLine1="    &lt;application"
+        errorLine2="     ~~~~~~~~~~~">
+        <location
+            file="/Users/may215/development/mobile/volume-normalizer/app/src/main/AndroidManifest.xml"
+            line="9"
+            column="6"/>
+    </issue>
+
+</issues>

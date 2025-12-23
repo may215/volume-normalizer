@@ -1,0 +1,6 @@
+Volume Normalizer protects your ears from sudden loud sounds.
+
+It monitors audio loudness in real time and gently adjusts media volume
+when spikes occur.
+
+No audio is recorded. No personal data is collected.

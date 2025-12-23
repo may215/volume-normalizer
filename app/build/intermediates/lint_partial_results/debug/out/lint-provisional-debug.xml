@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<incidents format="6" by="lint 8.0.2" type="conditional_incidents">
+
+    <incident
+        id="MissingPermission"
+        severity="error"
+        message="">
+        <fix-data missing="android.permission.RECORD_AUDIO" message="Missing permissions required by Builder.build: %1$s" lastApi="2147483647"/>
+        <location
+            file="${:app*debug*sourceProvider*0*javaDir*0}/com/yourapp/volumenormalizer/audio/AudioCaptureEngine.kt"
+            line="52"
+            column="20"
+            startOffset="2361"
+            endLine="56"
+            endColumn="21"
+            endOffset="2543"/>
+        <map>
+            <entry
+                name="requirement"
+                string="android.permission.RECORD_AUDIO"/>
+            <entry
+                name="message"
+                string="Missing permissions required by Builder.build: %1$s"/>
+        </map>
+    </incident>
+
+</incidents>

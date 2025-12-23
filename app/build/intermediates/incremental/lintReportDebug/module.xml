@@ -1,0 +1,19 @@
+<lint-module
+    format="1"
+    dir="/Users/may215/development/mobile/volume-normalizer/app"
+    name=":app"
+    type="APP"
+    maven="VolumeNormalizer:app:"
+    agpVersion="8.0.2"
+    buildFolder="build"
+    bootClassPath="/Users/may215/Library/Android/sdk/platforms/android-34/android.jar:/Users/may215/Library/Android/sdk/build-tools/30.0.3/core-lambda-stubs.jar"
+    javaSourceLevel="17"
+    compileTarget="android-34"
+    neverShrinking="true">
+  <lintOptions
+      abortOnError="true"
+      absolutePaths="true"
+      checkReleaseBuilds="true"
+      explainIssues="true"/>
+  <variant name="debug"/>
+</lint-module>
