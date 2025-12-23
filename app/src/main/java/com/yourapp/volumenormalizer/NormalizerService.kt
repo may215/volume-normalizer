@@ -21,6 +21,10 @@ class NormalizerService : Service() {
         const val EXTRA_RESULT_CODE = "vn.RESULT_CODE"
         const val EXTRA_DATA_INTENT = "vn.DATA_INTENT"
         private const val NOTIFICATION_ID = 1001
+
+        @Volatile
+        var isRunning = false
+            private set
     }
 
     private var engine: AudioCaptureEngine? = null
@@ -37,12 +41,14 @@ class NormalizerService : Service() {
                     // Start or restart the engine with the new projection
                     engine?.stop()
                     engine = AudioCaptureEngine(this).apply { start(resultCode, data) }
+                    isRunning = true
                 }
             }
             ACTION_STOP -> {
                 // Shut down engine and stop the service
                 engine?.stop()
                 engine = null
+                isRunning = false
                 // Remove the foreground notification and stop the service
                 ServiceCompat.stopForeground(this, ServiceCompat.STOP_FOREGROUND_REMOVE)
                 stopSelf()
@@ -55,6 +61,7 @@ class NormalizerService : Service() {
         // Clean up the engine if the service is destroyed unexpectedly
         engine?.stop()
         engine = null
+        isRunning = false
         super.onDestroy()
     }
 

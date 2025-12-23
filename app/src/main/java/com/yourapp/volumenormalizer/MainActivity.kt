@@ -81,7 +81,7 @@ fun VolumeNormalizerScreen(
     onStart: () -> Unit,
     onStop: () -> Unit
 ) {
-    var running by remember { mutableStateOf(false) }
+    var running by remember { mutableStateOf(NormalizerService.isRunning) }
 
     val ctx = androidx.compose.ui.platform.LocalContext.current
     // Persistent settings loaded from shared prefs
