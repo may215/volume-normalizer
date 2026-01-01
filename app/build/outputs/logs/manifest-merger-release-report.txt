@@ -1,9 +1,9 @@
 -- Merging decision tree log ---
 manifest
-ADDED from /Users/may215/development/mobile/volume-normalizer/app/src/main/AndroidManifest.xml:2:1-31:12
-INJECTED from /Users/may215/development/mobile/volume-normalizer/app/src/main/AndroidManifest.xml:2:1-31:12
-INJECTED from /Users/may215/development/mobile/volume-normalizer/app/src/main/AndroidManifest.xml:2:1-31:12
-INJECTED from /Users/may215/development/mobile/volume-normalizer/app/src/main/AndroidManifest.xml:2:1-31:12
+ADDED from /Users/may215/development/mobile/volume-normalizer/app/src/main/AndroidManifest.xml:2:1-33:12
+INJECTED from /Users/may215/development/mobile/volume-normalizer/app/src/main/AndroidManifest.xml:2:1-33:12
+INJECTED from /Users/may215/development/mobile/volume-normalizer/app/src/main/AndroidManifest.xml:2:1-33:12
+INJECTED from /Users/may215/development/mobile/volume-normalizer/app/src/main/AndroidManifest.xml:2:1-33:12
 MERGED from [com.google.android.material:material:1.11.0] /Users/may215/.gradle/caches/transforms-3/eab0d697e0a7b086044ec7b5d4c2d04c/transformed/material-1.11.0/AndroidManifest.xml:17:1-24:12
 MERGED from [androidx.appcompat:appcompat-resources:1.6.1] /Users/may215/.gradle/caches/transforms-3/f04ab6405209ad87e82b4f851a12208c/transformed/jetified-appcompat-resources-1.6.1/AndroidManifest.xml:17:1-22:12
 MERGED from [androidx.constraintlayout:constraintlayout:2.0.1] /Users/may215/.gradle/caches/transforms-3/f36eb58c6936b08f071e0f02536a60a4/transformed/constraintlayout-2.0.1/AndroidManifest.xml:2:1-11:12
@@ -69,20 +69,20 @@ MERGED from [androidx.documentfile:documentfile:1.0.0] /Users/may215/.gradle/cac
 MERGED from [androidx.localbroadcastmanager:localbroadcastmanager:1.0.0] /Users/may215/.gradle/caches/transforms-3/cc66778ab4e8bd3bf086d31dc5db3d06/transformed/localbroadcastmanager-1.0.0/AndroidManifest.xml:17:1-22:12
 MERGED from [androidx.print:print:1.0.0] /Users/may215/.gradle/caches/transforms-3/92256888e2a9141f5e6f652ce8bd7855/transformed/print-1.0.0/AndroidManifest.xml:17:1-22:12
 MERGED from [androidx.arch.core:core-runtime:2.2.0] /Users/may215/.gradle/caches/transforms-3/c78d09d6e5d23ef5eb57720daae59724/transformed/core-runtime-2.2.0/AndroidManifest.xml:17:1-22:12
-INJECTED from /Users/may215/development/mobile/volume-normalizer/app/src/main/AndroidManifest.xml:2:1-31:12
-INJECTED from /Users/may215/development/mobile/volume-normalizer/app/src/main/AndroidManifest.xml:2:1-31:12
-INJECTED from /Users/may215/development/mobile/volume-normalizer/app/src/main/AndroidManifest.xml:2:1-31:12
+INJECTED from /Users/may215/development/mobile/volume-normalizer/app/src/main/AndroidManifest.xml:2:1-33:12
+INJECTED from /Users/may215/development/mobile/volume-normalizer/app/src/main/AndroidManifest.xml:2:1-33:12
+INJECTED from /Users/may215/development/mobile/volume-normalizer/app/src/main/AndroidManifest.xml:2:1-33:12
 	package
 		ADDED from /Users/may215/development/mobile/volume-normalizer/app/src/main/AndroidManifest.xml:2:11-49
 		INJECTED from /Users/may215/development/mobile/volume-normalizer/app/src/main/AndroidManifest.xml
 		INJECTED from /Users/may215/development/mobile/volume-normalizer/app/src/main/AndroidManifest.xml
 	android:versionName
 		INJECTED from /Users/may215/development/mobile/volume-normalizer/app/src/main/AndroidManifest.xml
-		ADDED from /Users/may215/development/mobile/volume-normalizer/app/src/main/AndroidManifest.xml:2:1-31:12
+		ADDED from /Users/may215/development/mobile/volume-normalizer/app/src/main/AndroidManifest.xml:2:1-33:12
 		INJECTED from /Users/may215/development/mobile/volume-normalizer/app/src/main/AndroidManifest.xml
 	android:versionCode
 		INJECTED from /Users/may215/development/mobile/volume-normalizer/app/src/main/AndroidManifest.xml
-		ADDED from /Users/may215/development/mobile/volume-normalizer/app/src/main/AndroidManifest.xml:2:1-31:12
+		ADDED from /Users/may215/development/mobile/volume-normalizer/app/src/main/AndroidManifest.xml:2:1-33:12
 		INJECTED from /Users/may215/development/mobile/volume-normalizer/app/src/main/AndroidManifest.xml
 	xmlns:android
 		ADDED from /Users/may215/development/mobile/volume-normalizer/app/src/main/AndroidManifest.xml:3:5-63
@@ -95,11 +95,15 @@ ADDED from /Users/may215/development/mobile/volume-normalizer/app/src/main/Andro
 	android:name
 		ADDED from /Users/may215/development/mobile/volume-normalizer/app/src/main/AndroidManifest.xml:6:22-91
 uses-permission#android.permission.POST_NOTIFICATIONS
-ADDED from /Users/may215/development/mobile/volume-normalizer/app/src/main/AndroidManifest.xml:7:5-77
+ADDED from /Users/may215/development/mobile/volume-normalizer/app/src/main/AndroidManifest.xml:8:5-77
 	android:name
-		ADDED from /Users/may215/development/mobile/volume-normalizer/app/src/main/AndroidManifest.xml:7:22-74
+		ADDED from /Users/may215/development/mobile/volume-normalizer/app/src/main/AndroidManifest.xml:8:22-74
+uses-permission#android.permission.RECORD_AUDIO
+ADDED from /Users/may215/development/mobile/volume-normalizer/app/src/main/AndroidManifest.xml:9:5-71
+	android:name
+		ADDED from /Users/may215/development/mobile/volume-normalizer/app/src/main/AndroidManifest.xml:9:22-68
 application
-ADDED from /Users/may215/development/mobile/volume-normalizer/app/src/main/AndroidManifest.xml:9:5-29:19
+ADDED from /Users/may215/development/mobile/volume-normalizer/app/src/main/AndroidManifest.xml:11:5-31:19
 MERGED from [com.google.android.material:material:1.11.0] /Users/may215/.gradle/caches/transforms-3/eab0d697e0a7b086044ec7b5d4c2d04c/transformed/material-1.11.0/AndroidManifest.xml:22:5-20
 MERGED from [com.google.android.material:material:1.11.0] /Users/may215/.gradle/caches/transforms-3/eab0d697e0a7b086044ec7b5d4c2d04c/transformed/material-1.11.0/AndroidManifest.xml:22:5-20
 MERGED from [androidx.constraintlayout:constraintlayout:2.0.1] /Users/may215/.gradle/caches/transforms-3/f36eb58c6936b08f071e0f02536a60a4/transformed/constraintlayout-2.0.1/AndroidManifest.xml:9:5-20
@@ -119,37 +123,37 @@ MERGED from [androidx.startup:startup-runtime:1.1.1] /Users/may215/.gradle/cache
 	android:appComponentFactory
 		ADDED from [androidx.core:core:1.12.0] /Users/may215/.gradle/caches/transforms-3/9db417b6dc87d6febaeefcf6e54a08b4/transformed/core-1.12.0/AndroidManifest.xml:28:18-86
 	android:supportsRtl
-		ADDED from /Users/may215/development/mobile/volume-normalizer/app/src/main/AndroidManifest.xml:12:9-35
+		ADDED from /Users/may215/development/mobile/volume-normalizer/app/src/main/AndroidManifest.xml:14:9-35
 	android:label
-		ADDED from /Users/may215/development/mobile/volume-normalizer/app/src/main/AndroidManifest.xml:11:9-42
+		ADDED from /Users/may215/development/mobile/volume-normalizer/app/src/main/AndroidManifest.xml:13:9-42
 	android:allowBackup
-		ADDED from /Users/may215/development/mobile/volume-normalizer/app/src/main/AndroidManifest.xml:10:9-35
+		ADDED from /Users/may215/development/mobile/volume-normalizer/app/src/main/AndroidManifest.xml:12:9-35
 	android:theme
-		ADDED from /Users/may215/development/mobile/volume-normalizer/app/src/main/AndroidManifest.xml:13:9-54
+		ADDED from /Users/may215/development/mobile/volume-normalizer/app/src/main/AndroidManifest.xml:15:9-54
 activity#com.yourapp.volumenormalizer.MainActivity
-ADDED from /Users/may215/development/mobile/volume-normalizer/app/src/main/AndroidManifest.xml:15:9-22:20
+ADDED from /Users/may215/development/mobile/volume-normalizer/app/src/main/AndroidManifest.xml:17:9-24:20
 	android:exported
-		ADDED from /Users/may215/development/mobile/volume-normalizer/app/src/main/AndroidManifest.xml:17:13-36
+		ADDED from /Users/may215/development/mobile/volume-normalizer/app/src/main/AndroidManifest.xml:19:13-36
 	android:name
-		ADDED from /Users/may215/development/mobile/volume-normalizer/app/src/main/AndroidManifest.xml:16:13-41
+		ADDED from /Users/may215/development/mobile/volume-normalizer/app/src/main/AndroidManifest.xml:18:13-41
 intent-filter#action:name:android.intent.action.MAIN+category:name:android.intent.category.LAUNCHER
-ADDED from /Users/may215/development/mobile/volume-normalizer/app/src/main/AndroidManifest.xml:18:13-21:29
+ADDED from /Users/may215/development/mobile/volume-normalizer/app/src/main/AndroidManifest.xml:20:13-23:29
 action#android.intent.action.MAIN
-ADDED from /Users/may215/development/mobile/volume-normalizer/app/src/main/AndroidManifest.xml:19:17-69
+ADDED from /Users/may215/development/mobile/volume-normalizer/app/src/main/AndroidManifest.xml:21:17-69
 	android:name
-		ADDED from /Users/may215/development/mobile/volume-normalizer/app/src/main/AndroidManifest.xml:19:25-66
+		ADDED from /Users/may215/development/mobile/volume-normalizer/app/src/main/AndroidManifest.xml:21:25-66
 category#android.intent.category.LAUNCHER
-ADDED from /Users/may215/development/mobile/volume-normalizer/app/src/main/AndroidManifest.xml:20:17-77
+ADDED from /Users/may215/development/mobile/volume-normalizer/app/src/main/AndroidManifest.xml:22:17-77
 	android:name
-		ADDED from /Users/may215/development/mobile/volume-normalizer/app/src/main/AndroidManifest.xml:20:27-74
+		ADDED from /Users/may215/development/mobile/volume-normalizer/app/src/main/AndroidManifest.xml:22:27-74
 service#com.yourapp.volumenormalizer.NormalizerService
-ADDED from /Users/may215/development/mobile/volume-normalizer/app/src/main/AndroidManifest.xml:24:9-27:63
+ADDED from /Users/may215/development/mobile/volume-normalizer/app/src/main/AndroidManifest.xml:26:9-29:63
 	android:exported
-		ADDED from /Users/may215/development/mobile/volume-normalizer/app/src/main/AndroidManifest.xml:26:13-37
+		ADDED from /Users/may215/development/mobile/volume-normalizer/app/src/main/AndroidManifest.xml:28:13-37
 	android:foregroundServiceType
-		ADDED from /Users/may215/development/mobile/volume-normalizer/app/src/main/AndroidManifest.xml:27:13-60
+		ADDED from /Users/may215/development/mobile/volume-normalizer/app/src/main/AndroidManifest.xml:29:13-60
 	android:name
-		ADDED from /Users/may215/development/mobile/volume-normalizer/app/src/main/AndroidManifest.xml:25:13-46
+		ADDED from /Users/may215/development/mobile/volume-normalizer/app/src/main/AndroidManifest.xml:27:13-46
 uses-sdk
 INJECTED from /Users/may215/development/mobile/volume-normalizer/app/src/main/AndroidManifest.xml reason: use-sdk injection requested
 INJECTED from /Users/may215/development/mobile/volume-normalizer/app/src/main/AndroidManifest.xml
